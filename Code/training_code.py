@@ -19,7 +19,7 @@ def train(epoch, training_loader, model, optimizer, device, grad_step = 1, max_g
     tr_preds, tr_labels = [], []
     # put model in training mode
     model.train()
-    optimizer.zero_grad()
+    optimizer.zero_grad()  
     
     for idx, batch in enumerate(training_loader):
         ids = batch['input_ids'].to(device, dtype = torch.long)
