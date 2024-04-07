@@ -21,13 +21,15 @@ The datasets were trained on variants top of the BERT language model \(Devlin et
 
 The model ensembling code is adapted from \(Jayanthi and Gupta, 2021\) method of model ensembling. Various methods of ensembling were experimented, including majority-vote, weighted and unweighted. Ultimately, a majority ensemble of RoBERTa<sub>LARGE</sub> models were used. 
 
+Due to time constraints, proper entity normalization was not conducted. Rather, the NLTK framework was used to remove stop words from the span, and the remaining words was searched in the MedDRA library, which the first match found was submitted as the prediction.
+
 ## Results 
-**Performance Metric for Subtask 1a**
+**Overlapping Performance Metric for Subtask 1c**
 | Task | F1-Score | Precision | Recall | 
 | ---: | :---: | :---: | :---: |
-| Task 1a | 0.693 | 0.772 | 0.629 | 
+| Task 1c | 0.070 | 0.087 | 0.058 | 
 
-> Placed **2nd** of 29 submissions
+> Placed **6th** of 11 submissions
 
 ## Special Thanks
 - **Akshat Gupta**, for being a great project manager and guiding us through NLP from start to finish
